@@ -35,15 +35,5 @@ public class LoginController {
 	    return "resetpassword.jsp";
 	}
 	
-	@PostMapping("/resetpassword")
-	public String resetPassword(String password, String confirmpassword) {
-
-	    if(password.equals(confirmpassword)) {
-	        System.out.println("Password Updated");
-	    } else {
-	        System.out.println("Password mismatch");
-	    }
-
-	    return "login.jsp";
-	}
+	
 }
