@@ -28,4 +28,10 @@ public class LoginController {
 		System.out.println("Emp Id : "+empId);
 		return "home.jsp";
 	}
+	@PostMapping("/forgotpassword")
+	public String forgotPassword(@RequestParam String email) {
+
+	    System.out.println("Email entered : " + email);
+	    return "resetpassword.jsp";
+	}
 }
