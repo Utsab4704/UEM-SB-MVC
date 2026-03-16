@@ -8,7 +8,7 @@
 	<form action="login" method ="post">
 		<table>
 			<tr>
-				<td>User : </td>
+				<td>Email : </td>
 				<td><input type = "text" name="user"></input></td>
 			</tr>
 			<tr>

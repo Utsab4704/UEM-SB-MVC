@@ -9,24 +9,37 @@
 <h2>Reset Password</h2>
 
 <form action="resetpassword" method="post">
+
+<input type="hidden" name="email" value="${email}">
+
+
 <table>
 
 <tr>
 <td>New Password :</td>
-<td><input type="password" name="password"></td>
+<td>
+<input type="password" name="password" required>
+</td>
 </tr>
 
 <tr>
 <td>Confirm Password :</td>
-<td><input type="password" name="confirmpassword"></td>
+<td>
+<input type="password" name="confirmpassword" required>
+</td>
 </tr>
 
 <tr>
-<td><input type="submit" value="Reset"></td>
+<td colspan="2">
+<input type="submit" value="Reset Password">
+</td>
 </tr>
 
 </table>
 </form>
+
+<br>
+<a href="login.jsp">Back to Login</a>
 
 </body>
 </html>
