@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Reset Password</title>
 </head>
-<body>
+<body style="display:flex; justify-content:center; align-items:center; height:100vh;">
 
 <h2>Reset Password</h2>
 

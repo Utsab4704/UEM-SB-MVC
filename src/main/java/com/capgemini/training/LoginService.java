@@ -10,9 +10,9 @@ public class LoginService {
 	public UserEntity registerUser(UserEntity userentity) {
 		return loginRepository.save(userentity);
 	}
-	public boolean validateUser(String email, String password) {
+	public boolean validateUser(String input, String password) {
 
-        UserEntity user = loginRepository.findByEmail(email);
+        UserEntity user = loginRepository.findByEmailOrUsername(input, input);
 
         if(user != null && user.getPassword().equals(password)) {
             return true;

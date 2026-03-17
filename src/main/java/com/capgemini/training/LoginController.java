@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 
 @Controller
@@ -21,11 +22,16 @@ public class LoginController {
 	}
 	
 	@PostMapping("/login")
-	public String validate(@RequestParam String user,@RequestParam String password) {
+	public String validate(@RequestParam String user,@RequestParam String password, HttpServletRequest request, HttpServletResponse response) {
 		
 		System.out.println(user);
 		System.out.println(password);
 		if(loginService.validateUser(user, password)){
+			try {
+				request.getRequestDispatcher("/allemp").forward(request, response);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
             return "home.jsp";
         }
 		return "login.jsp";
